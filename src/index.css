@@ -56,11 +56,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
 }
 
 .theme {
-  border: 1px solid red;
   margin-left: 1em;
 }
 
