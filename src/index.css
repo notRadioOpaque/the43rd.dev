@@ -1,5 +1,6 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
   /* line-height: 1.5;
   font-weight: 400;
 
@@ -15,19 +16,34 @@
 }
 
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  height: 100%;
+    background-color: #fff;
+    background-image:linear-gradient(#434343, #282828);
+    position: relative;
+    z-index: 1;
+}
+
 .app {
   padding: 2em 3em;
+  height:100vh;
+  background-color: #282828;
+  opacity: 1;
+  background-image: radial-gradient(rgba(101, 74, 7, .5) 0.25px, #282828 0.25px);
+  background-size: 5px 5px;
+  color: #f8db93;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid red;
 }
 
 .logo {
@@ -36,7 +52,19 @@
   gap: 0.5em;
 }
 
-.docker {
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.theme {
+  border: 1px solid red;
+  margin-left: 1em;
+}
+
+/* .docker {
   border: 1px solid #000;
   border-radius: 40px;
   position: absolute;
@@ -54,8 +82,7 @@
   list-style: none;
   border-radius: 20px;
   gap: 0.5em;
-}
-
-/* .dock-item {
-  
 } */
+
+
+
