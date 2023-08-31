@@ -21,11 +21,21 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "CapianBold";
+  src: local("CapianBold"),
+   url("./fonts/Capian-Bold.ttf") format("truetype");
+  font-weight: bold;
+ }
+
 body {
   height: 100%;
   width: 100vw;
   background-color: #f5f5f4;
+  font-family: 'CapianBold';
+
 }
+
 
 .app {
   padding: 0 10em;
