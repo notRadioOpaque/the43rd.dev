@@ -2,6 +2,8 @@ function App() {
 	return (
 		<div className="app">
 			<Header />
+			<Main />
+			<Footer />
 		</div>
 	);
 }
@@ -21,52 +23,24 @@ function Header() {
 	);
 }
 
+function Main() {
+	return (
+		<main>
+			<div></div>
+		</main>
+	);
+}
+
+function Footer() {
+	return (
+		<footer>
+			<p>2023 - Que sera sera 🤞🏽</p>
+			<p>
+				Built with <span className="footer-link">Vite</span> &{" "}
+				<span className="footer-link">React</span>
+			</p>
+		</footer>
+	);
+}
+
 export default App;
-
-// function Docker() {
-//   return (
-//     <div className="docker">
-//       <ul className="docker-list">
-//         <DockItem>
-//           <FaTwitter />
-//         </DockItem>
-//         <DockItem>
-//           <FaFacebook />
-//         </DockItem>
-//         <DockItem>
-//           <FaDiscord />
-//         </DockItem>
-//         <DockItem>
-//           <FaTwitter />
-//         </DockItem>
-//         <DockItem>
-//           <FaFacebook />
-//         </DockItem>
-//         <DockItem>
-//           <FaDiscord />
-//         </DockItem>
-//       </ul>
-//     </div>
-//   );
-// }
-
-// function DockItem({ children }) {
-//   return (
-//     <li className="dock-item">
-//       <IconContext.Provider
-//         value={{
-//           style: {
-//             fontSize: "35px",
-//             color: "#000",
-//             padding: "10px",
-//             borderRadius: "50%",
-//             display: "block",
-//             background: "grey",
-//           },
-//         }}
-//       >
-//         <div>{children}</div>
-//       </IconContext.Provider>
-//     </li>
-//   );
-// }
