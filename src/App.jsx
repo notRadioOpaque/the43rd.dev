@@ -26,8 +26,28 @@ function Header() {
 function Main() {
 	return (
 		<main>
-			<div></div>
+			<About />
 		</main>
+	);
+}
+
+function About() {
+	return (
+		<div className="about">
+			<div className="text">
+				<h3>
+					Ismael <span className="footer-link">Muyideen</span>,
+				</h3>
+				<h4>Front-end Web Developer</h4>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta,
+					dicta dolorum vitae illo reprehenderit eum.
+				</p>
+			</div>
+			<div className="profile-pic">
+				<img src="src/assets/my-memoji.jpeg" alt="profile-pic" />
+			</div>
+		</div>
 	);
 }
 
