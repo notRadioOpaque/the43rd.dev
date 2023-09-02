@@ -105,9 +105,8 @@ main {
   line-height: 2rem;
 }
 
-.profile-pic {
-  /* border: 1px solid green; */
-}
+/* .profile-pic {
+  /* border: 1px solid green; */ 
 
 .profile-pic img {
   width: 300px;
@@ -129,14 +128,48 @@ footer {
   color: #2949e2;
 }
 
+/* splash screen */
 
+.intro {
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100vh;
+   background-color: #161616;
+   transition: .7s ease;
+}
 
-html {
-  --s: 100px; /* control the size */
-  
-  --_g: #0000 90deg,#366 0;
-  background: 
-    conic-gradient(from 90deg at 2px 2px,var(--_g)),
-    conic-gradient(from 90deg at 1px 1px,var(--_g));
-  background-size: var(--s) var(--s), calc(var(--s)/5) calc(var(--s)/5);
+.intro.fold {
+  top: -100vh;
+}
+
+.splash-screen-logo-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  display: flex;
+  gap: .3em;
+}
+
+.splash-screen-logo {
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+
+.splash-screen-logo.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out .5s;
+}
+
+.splash-screen-logo.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out .5s;
 }

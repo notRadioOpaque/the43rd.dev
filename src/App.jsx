@@ -1,6 +1,9 @@
+import { useEffect, useState } from "react";
+
 function App() {
 	return (
 		<div className="app">
+			<Intro />
 			<Header />
 			<Main />
 			<Footer />
@@ -47,6 +50,33 @@ function About() {
 			<div className="profile-pic">
 				<img src="src/assets/my-memoji.jpeg" alt="profile-pic" />
 			</div>
+		</div>
+	);
+}
+
+function Intro() {
+	const [animation, setAnimation] = useState("");
+	const [fold, setFold] = useState("");
+
+	useEffect(() => {
+		setTimeout(() => {
+			setAnimation("active");
+		}, 1000);
+
+		setTimeout(() => {
+			setAnimation("fade");
+		}, 2000);
+
+		setTimeout(() => {
+			setFold("fold");
+		}, 2500);
+	}, []);
+
+	return (
+		<div className={`intro ${fold}`}>
+			<h1 className="splash-screen-logo-header">
+				<span className={`splash-screen-logo ${animation}`}>the43rd</span>
+			</h1>
 		</div>
 	);
 }
