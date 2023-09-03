@@ -11,49 +11,6 @@ function App() {
 	);
 }
 
-function Header() {
-	return (
-		<header className="header">
-			<div className="logo">
-				<img src="/public/vite.svg" alt="logo" />
-				<span>the43rd</span>
-			</div>
-
-			<div className="contact">
-				<p>contact</p>
-			</div>
-		</header>
-	);
-}
-
-function Main() {
-	return (
-		<main>
-			<About />
-		</main>
-	);
-}
-
-function About() {
-	return (
-		<div className="about">
-			<div className="text">
-				<h3>
-					Ismael <span className="footer-link">Muyideen</span>,
-				</h3>
-				<h4>Front-end Web Developer</h4>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta,
-					dicta dolorum vitae illo reprehenderit eum.
-				</p>
-			</div>
-			<div className="profile-pic">
-				<img src="src/assets/my-memoji.jpeg" alt="profile-pic" />
-			</div>
-		</div>
-	);
-}
-
 function Intro() {
 	const [animation, setAnimation] = useState("");
 	const [fold, setFold] = useState("");
@@ -81,15 +38,78 @@ function Intro() {
 	);
 }
 
+function Header() {
+	return (
+		<header className="header">
+			<div className="logo">
+				<img src="/public/vite.svg" alt="logo" />
+				<span>the43rd</span>
+			</div>
+
+			<div className="contact">
+				<p>contact</p>
+			</div>
+		</header>
+	);
+}
+
+function Main() {
+	return (
+		<main className="main">
+			<About />
+			<Bento />
+		</main>
+	);
+}
+
+function About() {
+	return (
+		<div className="about">
+			<div className="text">
+				<h3>
+					Ismael <span className="footer-link">Muyideen</span>,
+				</h3>
+				<h4>Front-end Web Developer</h4>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta,
+					dicta dolorum vitae illo reprehenderit eum.
+				</p>
+			</div>
+			<div className="profile-pic">
+				<img src="src/assets/my-memoji.jpeg" alt="profile-pic" />
+			</div>
+		</div>
+	);
+}
+
+function Bento() {
+	return (
+		<div className="bento-wrapper">
+			<div className="bento-container">
+				<div className="bento-item"></div>
+				<div className="bento-item"></div>
+				<div className="bento-item"></div>
+				<div className="bento-item"></div>
+				<div className="bento-item"></div>
+				<div className="bento-item"></div>
+				<div className="bento-item"></div>
+				<div className="bento-item"></div>
+			</div>
+		</div>
+	);
+}
+
 function Footer() {
 	return (
-		<footer>
-			<p>2023 - Que sera sera 🤞🏽</p>
-			<p>
-				Built with <span className="footer-link">Vite</span> &{" "}
-				<span className="footer-link">React</span>
-			</p>
-		</footer>
+		<div className="footer-wrapper">
+			<footer>
+				<p>2023 - Que sera sera 🤞🏽</p>
+				<p>
+					Built with <span className="footer-link">Vite</span> &{" "}
+					<span className="footer-link">React</span>
+				</p>
+			</footer>
+		</div>
 	);
 }
 
