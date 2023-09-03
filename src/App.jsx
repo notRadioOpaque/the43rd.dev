@@ -1,4 +1,18 @@
 import { useEffect, useState } from "react";
+import reactIcon from "../src/assets/react.svg";
+
+const skillArr = [
+	"Bootstrap",
+	"CSS",
+	"HTML",
+	"Javascript",
+	"React",
+	"SASS",
+	"Tailwind",
+	"Typescript",
+];
+
+const toolsArr = ["Git", "Github", "Figma", "NPM", "VsCode"];
 
 function App() {
 	return (
@@ -57,6 +71,7 @@ function Main() {
 	return (
 		<main className="main">
 			<About />
+			<SkillSet />
 			<Bento />
 		</main>
 	);
@@ -78,6 +93,45 @@ function About() {
 			<div className="profile-pic">
 				<img src="src/assets/my-memoji.jpeg" alt="profile-pic" />
 			</div>
+		</div>
+	);
+}
+
+function SkillSet() {
+	return (
+		<div className="skill-set">
+			<h2 className="skill-set-heading">Technology</h2>
+			<SkillGroup skillTitle={"Front-end"}>
+				{Array.from({ length: 8 }, (_, i) => (
+					<SkillItem key={i} skillItem={skillArr.at(i)} />
+				))}
+			</SkillGroup>
+
+			<SkillGroup skillTitle={"Tools"}>
+				{Array.from({ length: 5 }, (_, i) => (
+					<SkillItem key={i} skillItem={toolsArr.at(i)} />
+				))}
+			</SkillGroup>
+		</div>
+	);
+}
+
+function SkillGroup({ skillTitle, children }) {
+	return (
+		<div>
+			<h3 className="skill-group-title">{skillTitle}</h3>
+			<div className="skill-group">{children}</div>
+		</div>
+	);
+}
+
+function SkillItem({ skillItem }) {
+	return (
+		<div className="skill-item">
+			<span>
+				<img src={reactIcon} alt="" />
+			</span>
+			<span>{skillItem}</span>
 		</div>
 	);
 }
