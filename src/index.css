@@ -84,26 +84,29 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-block: 4em; */
+  flex-direction: column;
+  margin-block: 3em;
   padding-left: 1em;
-  height: 45vh;
+  /* height: 45vh; */
 }
 
 .text {
   /* border: 1px solid red; */
-  width: 50%;
+  width: 70%;
+  order: 2;
+  text-align: center;
 }
 
 
 .text h3 {
   font-size: 2.3rem;
-  line-height: 3.5rem;
+  line-height: 3rem;
   /* border: 1px solid red; */
 }
 
 .text h4{
   font-size: 1.8rem;
-  line-height: 2.3rem;
+  line-height: 2rem;
   margin-block: .5em;
 }
 
@@ -112,18 +115,60 @@ body {
   line-height: 2rem;
 }
 
-/* .profile-pic {
-  /* border: 1px solid green; */ 
+ .profile-pic {
+  transform: rotateY(180deg);
+}
 
 .profile-pic img {
-  width: 300px;
-  transform: rotateY(180deg);
+  width: 200px;
+  order: 1;
+  margin-bottom: 2em;
+  -webkit-animation: hithere 2s ease infinite;
+          animation: hithere 2s ease infinite;
+
+}
+
+@-webkit-keyframes hithere {
+  /* 30% { transform: scale(1.2); } */
+  /* 40%, 60% { transform: rotate(-10deg); } */
+  50% { transform: rotate(-10deg); }
+  70% { transform: rotate(0deg); }
+  /* 100% { transform: scale(1); } */
+}
+
+@keyframes hithere {
+   /* 30% { transform: scale(1.2); } */
+   40%, 60% { transform: rotate(10deg); }
+   50% { transform: rotate(-10deg); }
+   70% { transform: rotate(0deg); }
+   /* 100% { transform: scale(1); } */
+}
+
+.about-btn {
+  border: none;
+  order: 3;
+  margin-block: 2em;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #516be7;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.about-btn span img{
+  width: 25px;
+  margin-left: 1em;
 }
 
 /* Skill set */
 .skill-set {
-  width: 100%;
+  width: 80%;
   padding: 1em;
+  margin: 0 auto;
   /* height: 40vh; */
   /* border: 1px solid red; */
 }
@@ -158,17 +203,20 @@ body {
 }
 
 .skill-item span:first-child {
-  /* border: 1px solid red; */
   border-radius: 4px;
   width: 30px;
   height: 30px;
-  padding: .3em;
+  padding: .25em;
   background: rgba(106,220,250, .2);
 }
 
 .skill-item img {
   width: 100%;
   display: block;
+}
+
+.skill-item span:last-child {
+  font-size: .9rem;
 }
 /* Skill set */
 
@@ -263,3 +311,5 @@ footer {
   opacity: 0;
   transition: ease-in-out .5s;
 }
+
+/* test to see what happens to waka */
