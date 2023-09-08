@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
+import downloadIcon from "../src/assets/download-icon.png";
 
 const skillArr = [
 	{
@@ -119,7 +120,24 @@ function Header() {
 			</div>
 
 			<div className="contact">
-				<p>contact</p>
+				<ul>
+					<li>
+						<span className="index">01.</span>
+						<a href="">About</a>
+					</li>
+					<li>
+						<span className="index">02.</span>
+						<a href="">Experience</a>
+					</li>
+					<li>
+						<span className="index">03.</span>
+						<a href="">Work</a>
+					</li>
+					<li>
+						<span className="index">04.</span>
+						<a href="">Contact</a>
+					</li>
+				</ul>
 			</div>
 		</header>
 	);
@@ -139,24 +157,27 @@ function About() {
 	return (
 		<div className="about">
 			<div className="text">
-				<h4>Hi, I'm Ismael Muyideen,</h4>
-				<h3>Building digital products, brands, and experience.</h3>
+				<h4 className="glow-text">Hi, my name is</h4>
+				<h2>Ismael Muyideen.</h2>
+				<h3>I build things for the web.</h3>
 				<p>
 					A Frontend Developer and Visual Designer with experience in web
-					design, brand identity and product design.
+					design, brand identity and product design. Currently, I’m focused on
+					building accessible, human-centered products at{" "}
+					<span>
+						<a className="glow-text" href="#">
+							Shawn Xchange
+						</a>
+					</span>
 				</p>
-			</div>
 
-			<div className="profile-pic">
-				<img src="src/assets/my-memoji.jpeg" alt="profile-pic" />
+				<button className="about-btn">
+					Grab a copy of my Resumè{" "}
+					<span>
+						<img src={downloadIcon} alt="" />
+					</span>
+				</button>
 			</div>
-
-			<button className="about-btn">
-				Connect with me{" "}
-				<span>
-					<img src="src/assets/react.svg" alt="" />
-				</span>
-			</button>
 		</div>
 	);
 }

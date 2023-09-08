@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700&display=swap');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   
@@ -31,15 +35,19 @@
 body {
   height: 100%;
   width: 100vw;
-  background-color: #fdfdff;
+  background-color: #0a192f;
   font-family: 'CapianBold';
+}
+
+.glow-text {
+  color: #6adcfa;
 }
 
 
 .app {
   /* padding: 0 10em; */
   /* height: 100vh; */
-  color: dimgray;
+  color: #8892b0;
   /* border: 1px solid green; */
   display: flex;
   justify-content: space-between;
@@ -53,9 +61,9 @@ body {
   justify-content: space-between;
   align-items: center;
   /* border: 1px solid red; */
-  margin-top: 2em;
+  margin-top: 1em;
   padding-block: 1em;
-  margin-inline: 160px;
+  margin-inline: 4em;
 }
 
 .logo {
@@ -68,100 +76,124 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.contact ul {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+}
+
+.contact ul li a {
+  text-decoration: none;
+  color: #8892b0;
+  font-size: .9rem;
+  font-weight: 300;
+  transition: color .3s ease;
+}
+
+.contact ul li a:hover {
+  color: #6adcfa;
+}
+
+.index {
+  color: #6adcfa;
+  margin-right: .5em;
+  font-size: .9rem;
+  font-weight: 300;
 }
 
 .main {
   /* width: 100%; */
   /* border: 1px solid red; */
   height: 100%;
-  margin-inline: 160px;
-  margin-block: 30px 60px;
+  margin: 0 4em;
 }
 
 .about {
   /* border: 1px solid blue; */
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  margin-block: 3em;
+  margin-block: 2em;
   padding-left: 1em;
-  /* height: 45vh; */
+  height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
 .text {
   /* border: 1px solid red; */
-  width: 70%;
-  order: 2;
-  text-align: center;
+  width: 80%;
+  margin-left: 8em;
 }
 
 
-.text h3 {
-  font-size: 2.3rem;
-  line-height: 3rem;
+.text h2 {
+  font-size: 4rem;
+  line-height: 1.3;
+  font-weight: 600;
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: -5%;
+  color:#ccd6f6;
   /* border: 1px solid red; */
 }
 
+.text h3 {
+  font-size: 4rem;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -5%;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 .text h4{
-  font-size: 1.8rem;
+  font-size: 1rem;
   line-height: 2rem;
-  margin-block: .5em;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .text p{
-  font-size: 1.3rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 2;
+  margin-top: 1em;
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 50%;
 }
 
- .profile-pic {
-  transform: rotateY(180deg);
-}
-
-.profile-pic img {
-  width: 200px;
-  order: 1;
-  margin-bottom: 2em;
-  -webkit-animation: hithere 2s ease infinite;
-          animation: hithere 2s ease infinite;
-
-}
-
-@-webkit-keyframes hithere {
-  /* 30% { transform: scale(1.2); } */
-  /* 40%, 60% { transform: rotate(-10deg); } */
-  50% { transform: rotate(-10deg); }
-  70% { transform: rotate(0deg); }
-  /* 100% { transform: scale(1); } */
-}
-
-@keyframes hithere {
-   /* 30% { transform: scale(1.2); } */
-   40%, 60% { transform: rotate(10deg); }
-   50% { transform: rotate(-10deg); }
-   70% { transform: rotate(0deg); }
-   /* 100% { transform: scale(1); } */
+.text p span a {
+  text-decoration: none;
 }
 
 .about-btn {
   border: none;
   order: 3;
   margin-block: 2em;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #516be7;
-  color: #fff;
-  font-size: 1.1rem;
+  background: rgba(51, 65, 85, .4);
+  color: #6adcfa;
+  font-size: 1rem;
+  font-family: 'Roboto Mono', monospace;
   cursor: pointer;
+  outline-width: 1px;
+  outline-color: #6adcfa;
+  outline-style: solid;
+  outline-offset: 3px;
+  transition: .1s linear;
+}
+
+.about-btn:hover {
+  outline-offset: 5px;
 }
 
 .about-btn span img{
   width: 25px;
   margin-left: 1em;
+  color: #fff;
+  background: transparent;
 }
 
 /* Skill set */
