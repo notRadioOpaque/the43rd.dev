@@ -37,10 +37,12 @@ body {
   width: 100vw;
   background-color: #0a192f;
   font-family: 'CapianBold';
+  /* background: #fff; */
 }
 
 .glow-text {
   color: #6adcfa;
+    text-decoration: none;
 }
 
 
@@ -52,7 +54,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  position: relative;
+  /* position: relative; */
   /* border: 1px solid red; */
 }
 
@@ -196,13 +198,63 @@ body {
   background: transparent;
 }
 
+.about-me {
+  width: 65%;
+  margin: 7em auto;
+}
+
+.about-me .heading {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.about-me .heading-number {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.about-me h3 {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #ccd6f6;
+  font-size: 1.5rem;
+}
+
+.line {
+  width: 40%;
+  border-bottom: 1px solid rgba(105, 105, 105, 0.5);
+  border-collapse: collapse;
+}
+
+.about-me .content {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 2em;
+}
+
+.about-me .content .about-me-text {
+  width: 65%;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1rem;
+  line-height: 2;
+  padding-right: 2em;
+}
+
+.about-me-text p {
+  margin-bottom: 1em;
+}
+
+.about-me .content .image {
+  width: 35%;
+}
+
+.about-me .content .image img {
+  width: 100%;
+}
 /* Skill set */
 .skill-set {
-  width: 80%;
-  padding: 1em;
-  margin: 0 auto;
+  width: 65%;
+    margin: 7em auto;
   /* height: 40vh; */
-  /* border: 1px solid red; */
 }
 
 .skill-set-heading {
@@ -252,35 +304,112 @@ body {
 }
 /* Skill set */
 
-/* Bento Grid */
-
-.bento-wrapper {
-  width: 100%;
-  height: 100vh;
-  border: 1px solid;
-  padding: 50px;
+.work {
+  width: 50%;
+  margin: 0 auto;
 }
 
-.bento-container {
-  border: 1px solid red;
-  width: 100%;
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 2em;
+  height: 500px;
+}
+
+.sidebar {
+  width: 30%;
+}
+
+.details {
+  width: 70%;
+  padding: 10px;
+}
+
+.work .heading {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.work .heading-number {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.work h3 {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #ccd6f6;
+  font-size: 1.5rem;
+}
+
+.line {
+  width: 40%;
+  border-bottom: 1px solid rgba(105, 105, 105, 0.5);
+  border-collapse: collapse;
+}
+
+.work-list {
+  list-style: none;
   height: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
 }
 
-.bento-item {
-  border: 1px solid green;
+.work-list li {
+  color: #8892b0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: .9rem;
+  line-height: 2;
+  border-left: 2px solid #8892b0;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  /* transition: all .3s; */
+  background: transparent;
+  cursor: pointer;
 }
 
-/* Bento Grid */
+.work-list li:hover {
+  background: rgb(17, 33, 65, .7);
+  border-left: 2px solid #6adcfa;
+  color: #6adcfa;
+}
+
+.active-work {
+  background: rgb(17, 33, 65, .7);
+  border-left: 2px solid #6adcfa;
+  color: #6adcfa;
+}
+
+.active-work li,
+.active-work li:hover {
+  border-left: 2px solid transparent;
+}
+
+/* .work-details {
+  width: 70%;
+} */
+
+.details h4 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-family: 'Noto Sans JP', sans-serif;
+  /* font-weight: 400; */
+}
+
+.details p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: .9rem;
+  line-height: 2;
+}
+
+.details li {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: .9rem;
+  line-height: 2;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
 
 .footer-wrapper {
   width: 100%;
-  /* border: 1px solid red; */
-  position: absolute;
-  bottom: 0;
 }
 
 footer {
@@ -343,5 +472,3 @@ footer {
   opacity: 0;
   transition: ease-in-out .5s;
 }
-
-/* test to see what happens to waka */

@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import downloadIcon from "../src/assets/download-icon.png";
+import Table from "./components/Table";
+import axios from "axios";
 
 const skillArr = [
 	{
@@ -73,12 +75,78 @@ const toolsArr = [
 	},
 ];
 
+const works = [
+	{
+		organization: 'Shawn Xchange',
+		start: 'August 2023',
+		end: 'present',
+		role: 'Junior Frontend Developer',
+		activities: [
+			'Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more',
+			'Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements',
+			'Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders',
+			'Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship'
+		], 
+		id: 0
+	},
+	{
+		organization: 'Scout Studio',
+		start: 'Spring 2016',
+		end: 'Spring 2017',
+		role: 'Developer',
+		activities: [
+			'Collaborated with other student designers and engineers on pro-bono projects to create new brands, design systems, and websites for organizations in the community',
+			'Built and delivered technical solutions according to stakeholder business requirements',
+		],
+		id: 1
+	},
+	{
+		organization: 'Starry',
+		start: 'July',
+		end: 'December 2016',
+		role: 'Software Engineer Co-op',
+		activities: [
+			"Engineered and improved major features of Starry's customer-facing Android web app using ES6, Handlebars, Backbone, Marionette, and CSS",
+			'Proposed and implemented scalable solutions to issues identified with cloud services and applications responsible for communicating with the Starry Station internet router',
+			'Collaborated with designers and other developers to ensure thoughtful and consistent user experiences across Starry’s iOS and Android mobile apps'
+		],
+		id: 2
+	},
+	{
+		organization: 'MullenLowe',
+		start: 'July',
+		end: 'December 2015',
+		role: 'Creative Technologist Co-op',
+		activities: [
+			'Developed, maintained, and shipped production code for client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery',
+			'Performed quality assurance tests on various sites to ensure cross-browser compatibility and mobile responsiveness',
+			'Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more'
+		],
+		id: 3
+	}
+] 
+
+const column = [
+	{ heading: 'Name', value: 'name' },
+	{ heading: 'Email', value: 'email' },
+	{ heading: 'Phone', value: 'phone' },
+	{heading: 'City', value: 'address.city'},
+]
+
 function App() {
+	const [dataTable, setDataTable] = useState([]);
+    // console.log(dataTable);
+
+	useEffect(() => {
+        axios('https://jsonplaceholder.typicode.com/users').then(res => setDataTable(res.data)).catch(err => console.log(err))
+	}, []);
+	
 	return (
 		<div className="app">
 			<Intro />
 			<Header />
 			<Main />
+			<Table data={dataTable} column={column} />
 			<Footer />
 		</div>
 	);
@@ -147,8 +215,9 @@ function Main() {
 	return (
 		<main className="main">
 			<About />
+			<AboutMe />
 			<SkillSet />
-			<Bento />
+			<Work />
 		</main>
 	);
 }
@@ -180,6 +249,71 @@ function About() {
 			</div>
 		</div>
 	);
+}
+
+function AboutMe() {
+	return <div className="about-me">
+		<div className="heading">
+			<span className="heading-number glow-text">01.</span>
+			<h3>About Me</h3>
+			<span className="line"></span>
+		</div>
+
+		<div className="content">
+			<div className="about-me-text">
+				<p>Hello! My name is Ismael and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!</p>
+				<p>Fast-forward to today, and I’ve had the privilege of working at <a className="glow-text" href="">Shawn Xchange.</a> My main focus these days is building accessible, inclusive products and digital experiences at <a className="glow-text" href="">Shawn Xchange</a> for a variety of clients.</p>
+			</div>
+			<div className="image">
+				<img src='src/assets/my-memoji.jpeg' alt="" />
+			</div>
+		</div>
+	</div>
+}
+
+function Work() {
+	const [selectedWork, setSelectedWork] = useState(works[0]);
+
+	function handleSelectWork(work) {
+		setSelectedWork(work);
+		console.log(selectedWork);
+	}
+
+
+	return <div className="work">
+		<div className="heading">
+			<span className="heading-number glow-text">02.</span>
+			<h3>Where i've worked</h3>
+			<span className="line"></span>
+		</div>
+
+		<div className="content">
+			<div className="sidebar">
+				<ul className="work-list">
+					{works.map((work, index) => <WorkItem work={work} selectedWork={selectedWork} onSelectWork={handleSelectWork}  key={index}/>)}
+				</ul>
+			</div>
+			<div className="details">
+				<WorkItemDetails work={selectedWork} />
+			</div>
+		</div>
+	</div>
+}
+
+function WorkItem({ work, onSelectWork, selectedWork }) {
+	const isSelected = selectedWork.id === work.id;
+	console.log();
+	return <div className={isSelected ? 'active-work' : ''}>
+		<li onClick={() => onSelectWork(work)}>{work.organization}</li>
+	</div>
+}
+
+function WorkItemDetails({work}) {
+	return <div className="work-details">
+	<h4>{work.role} @ <span className="glow-text">{work.organization}</span></h4>
+	<p>{work.start} to {work.end}</p>
+	{work.activities.map((activity, i) => <li key={i}>{activity}</li>)}
+</div>
 }
 
 function SkillSet() {
@@ -227,23 +361,6 @@ function SkillItem({ skillItem, skillLogo, bgColor }) {
 				<img src={skillLogo} alt="" />
 			</span>
 			<span>{skillItem}</span>
-		</div>
-	);
-}
-
-function Bento() {
-	return (
-		<div className="bento-wrapper">
-			<div className="bento-container">
-				<div className="bento-item"></div>
-				<div className="bento-item"></div>
-				<div className="bento-item"></div>
-				<div className="bento-item"></div>
-				<div className="bento-item"></div>
-				<div className="bento-item"></div>
-				<div className="bento-item"></div>
-				<div className="bento-item"></div>
-			</div>
 		</div>
 	);
 }
