@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import downloadIcon from "../src/assets/download-icon.png";
-import Table from "./components/Table";
-import axios from "axios";
+import FeaturedProject from "./components/FeaturedProjects/FeaturedProjects";
 
 const skillArr = [
 	{
@@ -126,27 +125,14 @@ const works = [
 	}
 ] 
 
-const column = [
-	{ heading: 'Name', value: 'name' },
-	{ heading: 'Email', value: 'email' },
-	{ heading: 'Phone', value: 'phone' },
-	{heading: 'City', value: 'address.city'},
-]
+
 
 function App() {
-	const [dataTable, setDataTable] = useState([]);
-    // console.log(dataTable);
-
-	useEffect(() => {
-        axios('https://jsonplaceholder.typicode.com/users').then(res => setDataTable(res.data)).catch(err => console.log(err))
-	}, []);
-	
 	return (
 		<div className="app">
 			<Intro />
 			<Header />
 			<Main />
-			<Table data={dataTable} column={column} />
 			<Footer />
 		</div>
 	);
@@ -218,6 +204,7 @@ function Main() {
 			<AboutMe />
 			<SkillSet />
 			<Work />
+			<FeaturedProject />
 		</main>
 	);
 }
