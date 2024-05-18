@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.switch {
+  width: 40px;
+  background: #2f2f2f;
+  border-radius: 5em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.handle {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: .25em;
+  background: white;
+  transition: transform .3s;
+}
+
+.move-right {
+  transform: translateX(45px);
+}
