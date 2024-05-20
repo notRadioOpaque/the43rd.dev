@@ -1,0 +1,13 @@
+.image_wrapper {
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_wrapper img{
+  display: block;
+  margin: 0;
+  padding: 0;
+}

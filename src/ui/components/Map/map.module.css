@@ -1,0 +1,42 @@
+.map_wrapper {
+  flex: 1;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.location_details {
+  width: 30%;
+  height: 100%;
+}
+
+.map {
+  height: 100%;
+  width: 65%;
+  border-radius: 12px;
+}
+
+.location_details_item {
+  margin-bottom: 2em;
+}
+
+.title {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #666;
+}
+
+.value {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 1.5em;
+  border-bottom: 1px solid #666;
+  margin-top: .5em;
+}

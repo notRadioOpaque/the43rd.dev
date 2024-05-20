@@ -1,0 +1,86 @@
+.home_wrapper {
+  display: flex;
+  gap: 1em;
+}
+
+.left_group {
+  width: 16.7%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 8em;
+}
+
+.middle_group {
+  width: 50.1%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.middle_group_bottom {
+  display: flex;
+  gap: 1em;
+}
+
+.mg_left {
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  gap: 1em;
+}
+
+.mg_right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.intro_text {
+  padding: 2em 3em;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  margin-left: -8px;
+}
+
+.subtitle_text {
+  margin-top: -5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2046f5;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 180%;
+}
+
+.right_group {
+  width: 33.4%;
+  display: flex;
+  gap: 1em;
+}
+
+.rg_left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1.5em;
+}
+
+.rg_right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 6em;
+}

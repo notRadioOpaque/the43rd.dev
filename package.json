@@ -11,16 +11,19 @@
   },
   "dependencies": {
     "@studio-freight/react-lenis": "^0.0.43",
-    "axios": "^1.5.0",
+    "axios": "^1.6.8",
+    "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-intersection-observer": "^9.5.3",
+    "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.21.1",
     "react-table": "^7.8.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.22.15",
+    "@types/leaflet": "^1.9.12",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",

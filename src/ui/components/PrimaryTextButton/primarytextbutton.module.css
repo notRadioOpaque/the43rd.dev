@@ -1,0 +1,55 @@
+button {
+  all: unset;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: .7em 1em;
+}
+
+.btn_image {
+  display: block;
+  width: 20px;
+  height: 20px;
+  transition: transform .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+button:hover .btn_image {
+  transform: translate(3px, -3px);
+}
+
+.background_type {
+  background-color: #fff;
+  color: #344054;
+}
+
+.no_background_type {
+  background-color: none;
+  border: 1px solid #D0D5DD;
+  color: #344054;
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* .background_type:hover {
+  
+}
+
+.background_type:active {
+  
+}
+
+.no_background_type:hover {
+  
+}
+
+.no_background_type:active {
+  
+} */
