@@ -3,7 +3,7 @@ import styles from "./map.module.css";
 import { useEffect, useState } from "react";
 import PageHeader from "../PageHeader/Pageheader";
 
-const MY_COORDINATES: [number, number] = [8.49664, 4.54214];
+const coordinates: [number, number] = [8.49664, 4.54214];
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
 type LocationType = {
@@ -26,7 +26,7 @@ function Map() {
     const fetchLocationDets = async () => {
       try {
         setIsLoading(true);
-        const res = await fetch(`${BASE_URL}?latitude${MY_COORDINATES[0]}?longitude${MY_COORDINATES[1]}`);
+        const res = await fetch(`${BASE_URL}?latitude${coordinates[0]}?longitude${coordinates[1]}`);
         const data = await res.json();
         setLocationDets(data);
       } catch (error) {
@@ -37,7 +37,7 @@ function Map() {
     };
 
     fetchLocationDets();
-  }, [MY_COORDINATES]);
+  }, [coordinates]);
 
   return (
     <>
@@ -61,12 +61,12 @@ function Map() {
           </div>
         </div>
 
-        <MapContainer center={MY_COORDINATES} zoom={6} scrollWheelZoom={true} className={styles.map}>
+        <MapContainer center={coordinates} zoom={6} scrollWheelZoom={true} className={styles.map}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
           />
-          <Marker position={MY_COORDINATES}>
+          <Marker position={coordinates}>
             <Popup>
               A pretty CSS3 popup. <br /> Easily customizable.
             </Popup>
