@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { fetchGithubProfile } from "../../../services/Github/action";
 import arrowIcon from "../../../assets/icons/right-up-arrow-colored.svg";
 import githubIcon from "../../../assets/icons/Github-Dark.svg";
+import mapImage from "../../../assets/images/map-image.jpg";
+import mapMarker from "../../../assets/icons/map-marker.svg";
 
 type githubProfileType = {
   name: string;
@@ -35,7 +37,7 @@ function Home() {
           <div>socials</div>
         </BentoWrapper>
 
-        <BentoWrapper width="100%" height="250px" title="tech stack">
+        <BentoWrapper width="100%" height="250px">
           <div></div>
         </BentoWrapper>
       </div>
@@ -92,8 +94,10 @@ function Home() {
 
       <div className={styles.right_group}>
         <div className={styles.rg_left}>
-          <BentoWrapper width="100%" height="180px" action={() => navigate("location")}>
-            <div>map</div>
+          <BentoWrapper width="100%" height="180px" action={() => navigate("location")} bgImg={mapImage} title="location">
+            <div className={styles.marker}>
+              <ImageWrapper imgFile={mapMarker} width="50px" height="50px" />
+            </div>
           </BentoWrapper>
 
           <BentoWrapper width="100%" height="250px" action={() => navigate("projects")}>

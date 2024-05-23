@@ -108,3 +108,9 @@
   font-size: 12px;
   font-weight: 400;
 }
+
+.marker {
+  position: absolute;
+  top: 90px;
+  left: 100px;
+}

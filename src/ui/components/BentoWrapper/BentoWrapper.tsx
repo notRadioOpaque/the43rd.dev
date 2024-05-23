@@ -12,6 +12,7 @@ export default function BentoWrapper({
   width,
   action,
   title,
+  bgImg,
 }: {
   top?: string;
   right?: string;
@@ -22,6 +23,7 @@ export default function BentoWrapper({
   width?: string;
   action?: () => void;
   title?: string;
+  bgImg?: string;
 }) {
   const style = {
     paddingTop: top,
@@ -30,6 +32,7 @@ export default function BentoWrapper({
     paddingLeft: left,
     height: height,
     width: width,
+    backgroundImage: `url(${bgImg})`,
   };
   return (
     <div className={styles.bento_outer} onClick={action}>
