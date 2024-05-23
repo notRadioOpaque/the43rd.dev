@@ -7,7 +7,7 @@
 }
 
 .bento_outer:hover {
-  transform: scale(1.02);
+  transform: translateY(3px);
 }
 
 .wrapper {
@@ -19,4 +19,17 @@
   padding: 1em;
   border-radius: 16px;
   background: rgba(11, 11, 11, 0.9);
+}
+
+.bento_title_wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: -5px;
+}
+
+.bento_title_wrapper p {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: -5px;
+  color: rgba(32, 70, 245, 1);
 }

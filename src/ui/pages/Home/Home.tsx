@@ -31,12 +31,12 @@ function Home() {
   return (
     <div className={styles.home_wrapper}>
       <div className={styles.left_group}>
-        <BentoWrapper width="100%" height="160px">
+        <BentoWrapper width="100%" height="160px" title="Socials">
           <div>socials</div>
         </BentoWrapper>
 
-        <BentoWrapper width="100%" height="250px">
-          <div>Tech stack</div>
+        <BentoWrapper width="100%" height="250px" title="tech stack">
+          <div></div>
         </BentoWrapper>
       </div>
 
