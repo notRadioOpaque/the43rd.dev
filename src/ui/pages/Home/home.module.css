@@ -84,3 +84,31 @@
   gap: 1em;
   margin-top: 6em;
 }
+
+/* .github_wrapper {
+  border: 1px solid red;
+} */
+
+.github_wrapper div {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  margin-bottom: .3em;
+}
+
+.arrow {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.github_icon {
+  position: absolute;
+  top: 42px;
+  left: 40px;
+}
+
+.pub_repo {
+  font-size: 12px;
+  font-weight: 400;
+}

@@ -3,18 +3,30 @@ import IconSpark from "../../../assets/icons/spark.svg";
 import ImageWrapper from "../../components/ImageWrapper/ImageWrapper";
 import BentoWrapper from "../../components/BentoWrapper/BentoWrapper";
 import { useNavigate } from "react-router-dom";
-import { fetchGithubProfile } from "../../../services/Github/action";
 import { useEffect, useState } from "react";
+import { fetchGithubProfile } from "../../../services/Github/action";
+import arrowIcon from "../../../assets/icons/right-up-arrow-colored.svg";
+import githubIcon from "../../../assets/icons/Github-Dark.svg";
+
+type githubProfileType = {
+  name: string;
+  avatar_url: string;
+  html_url: string;
+  public_repos: number;
+};
 
 function Home() {
   const navigate = useNavigate();
-  const [githubProfile, setGithubProfile] = useState({});
+  const [githubProfile, setGithubProfile] = useState<githubProfileType>({
+    name: "",
+    avatar_url: "",
+    html_url: "",
+    public_repos: 0,
+  });
 
   useEffect(() => {
     fetchGithubProfile(setGithubProfile);
   }, []);
-
-  console.log(githubProfile);
 
   return (
     <div className={styles.home_wrapper}>
@@ -49,11 +61,24 @@ function Home() {
             </BentoWrapper>
 
             <BentoWrapper width="100%" height="max-content">
-              <div>Github</div>
-            </BentoWrapper>
+              <>
+                <div className={styles.github_wrapper}>
+                  <div className={styles.github_icon}>
+                    <ImageWrapper imgFile={githubIcon} width="17px" height="17px" />
+                  </div>
+                  <div>
+                    <ImageWrapper imgFile={githubProfile.avatar_url} width="35px" height="35px" />
+                    <p>{githubProfile.name}</p>
+                  </div>
+                  <p className={styles.pub_repo}>Public Repos: {githubProfile.public_repos}</p>
+                </div>
 
-            <BentoWrapper width="100%" height="max-content">
-              <div>Spotify</div>
+                <div className={styles.arrow}>
+                  <a href={githubProfile.html_url}>
+                    <ImageWrapper imgFile={arrowIcon} width="20px" height="20px" />
+                  </a>
+                </div>
+              </>
             </BentoWrapper>
           </div>
 

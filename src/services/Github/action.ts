@@ -1,19 +1,18 @@
 
+const URL = 'https://api.github.com/users/the43rdsensei-0';
 const token = import.meta.env.VITE_GITHUB_TOKEN;
 
-export const fetchGithubProfile = async (setModel: (data: any) => void) => {
+export const fetchGithubProfile = async (setModel:any) => {
   try {
-    const response = await fetch(`https://api.github.com/users/the43rdsensei-0`, {
+    const res = await fetch(URL, {
       headers: {
-        Authorization: `token ${token}`,
-      },
-    });
-    if (!response.ok) {
-      throw new Error("Something went wrong!");
-    }
-    const data = await response.json();
+        Authorization: `token ${token}`
+      }
+    })
+
+    const data = await res.json();
     setModel(data);
-  } catch (error: any) {
-    console.log(error.message);
+  } catch (error) {
+    console.error(error);
   }
-};
+}
