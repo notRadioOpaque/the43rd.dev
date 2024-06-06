@@ -1,0 +1,57 @@
+.project_wrapper {
+  border: 1px solid green;
+  padding: 3em;
+}
+
+.project_item {
+  border: 1px solid red;
+  display: flex;
+  justify-content: left;
+  gap: 3em;
+  padding: 1.5em;
+  border-radius: 8px;
+}
+
+.project_graphic {
+  /* width: 40%; */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project_details {
+  width: 60%;
+}
+
+.project_heading {
+  margin-bottom: 1em;
+}
+
+.project_heading h3{
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.project_about {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.lang_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+.lang {
+  padding: .5em 1em;
+  border-radius: 1000px;
+  background: rgba(48, 48, 48, 0.5);
+}
+
+.btn_group {
+  display: flex;
+  align-items: center;
+}

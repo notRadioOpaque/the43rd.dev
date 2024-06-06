@@ -1,5 +1,5 @@
 
-const URL = 'https://api.github.com/users/the43rdsensei-0';
+const URL = import.meta.env.VITE_GITHUB_URL;
 const token = import.meta.env.VITE_GITHUB_TOKEN;
 
 export const fetchGithubProfile = async (setModel:any) => {
