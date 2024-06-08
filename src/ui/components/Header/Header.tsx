@@ -1,6 +1,6 @@
 import PrimaryTextButton from "../PrimaryTextButton/PrimaryTextButton";
 import styles from "./header.module.css";
-import arrowIcon from "../../../assets/icons/right-up-arrow.svg";
+import arrowIcon from "../../../assets/icons/right-up-arrow-colored.svg";
 import { useState } from "react";
 import ModalContainer from "../ModalContainer/ModalContainer";
 import ImageWrapper from "../ImageWrapper/ImageWrapper";
@@ -14,7 +14,13 @@ function Header() {
       <div className={styles.header_wrapper}>
         <h3>Logo</h3>
 
-        <PrimaryTextButton label="Contact me" width="auto" suffixIcon={arrowIcon} action={() => setShowModal(true)} />
+        <PrimaryTextButton
+          extrastyle={styles.contact_me_btn}
+          label="Contact me"
+          width="auto"
+          suffixIcon={arrowIcon}
+          action={() => setShowModal(true)}
+        />
       </div>
 
       {showModal && (
@@ -33,7 +39,6 @@ function Header() {
             <div className={styles.btn_group}>
               <div className={styles.email}>Ismailmuyideen.c05@gmail.com</div>
 
-              {/* <PrimaryTextButton extrastyle={styles.get_in_touch_btn} label="Get in touch" action={() => {}} /> */}
               <a className={styles.get_in_touch_btn} href="mailto:ismailmuyideen.c05@gmail.com">
                 Get in touch
               </a>

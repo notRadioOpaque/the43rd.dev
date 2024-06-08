@@ -54,7 +54,7 @@
   margin-top: -5px;
   font-size: 18px;
   font-weight: 600;
-  color: #2046f5;
+  color: var(--secondary-text-color);
 }
 
 .title {
@@ -122,21 +122,30 @@
   margin-top: .5em;
 }
 
+.socials_wrapper a p{
+  color: var(--primary-text-color);
+  transition: color .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: .3s;
+}
+
+.socials_wrapper a:hover p{
+  color: var(--secondary-text-color);
+}
+
 .social {
   display: flex;
   gap: .5em;
   align-items: center;
-  color: #fff;
-  transition: color .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .social p {
   font-size: 13px;
   font-weight: 400;
+  color: var(--primary-text-color);
 }
 
 .social:hover {
-  color: #2046f5;
+  color: var(--secondary-text-color);
 }
 
 .bag_icon {
@@ -166,7 +175,7 @@
 
 .about_me_heading .role {
   font-size: 14px;
-  color: grey;
+  color: var(--secondary-text-color);
 }
 
 .about_me_text {
@@ -179,108 +188,3 @@
   margin-bottom: 1em;
 }
 
-/* .about_me_text p{
-  border: 1px solid green;
-} */
-
-.mode_wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: .8em;
-  margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.mode_wrapper p {
-  font-size: 14px;
-  font-weight: 400;
-}
-
-
-.toggle_container {
-  --active-color: #1868e3;
-  --inactive-color: #d3d3d6;
-  position: relative;
-  aspect-ratio: 292 / 142;
-  height: 1.875em;
-}
-
-.toggle_input {
-  appearance: none;
-  margin: 0;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.toggle {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.toggle_background {
-  fill: var(--inactive-color);
-  transition: fill .4s;
-}
-
-.toggle_input:checked + .toggle .toggle_background {
-  fill: var(--active-color);
-}
-
-.toggle_circle_center {
-  transform-origin: center;
-  transition: transform .6s;
-}
-
-.toggle_input:checked + .toggle .toggle_circle_center {
-  transform: translateX(150px);
-}
-
-.toggle_circle {
-  transform-origin: center;
-  transition: transform .45s;
-  backface-visibility: hidden;
-}
-
-.toggle_circle.left {
-  transform: scale(1);
-}
-
-.toggle_input:checked + .toggle .toggle_circle.left {
-  transform: scale(0);
-}
-
-.toggle_circle.right {
-  transform: scale(0);
-}
-
-.toggle_input:checked + .toggle .toggle_circle.right {
-  transform: scale(1);
-}
-
-.toggle_icon {
-  transition: fill .4s;
-}
-
-.toggle_icon.on {
-  fill: var(--inactive-color);
-}
-
-.toggle_input:checked + .toggle .toggle_icon.on {
-  fill: #fff;
-}
-
-.toggle_icon.off {
-  fill: #eaeaec;
-}
-
-.toggle_input:checked + .toggle .toggle_icon.off {
-  fill: var(--active-color);
-}

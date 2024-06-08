@@ -5,6 +5,14 @@
   margin-bottom: 3em;
 }
 
+.contact_me_btn {
+  background-color: var(--foreground-color);
+  color: var(--primary-text-color);
+  border: 2px solid var(--accent-color);
+  transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: .3s;
+}
+
 .content_wrapper {
   display: flex;
   flex-direction: column;
@@ -71,7 +79,7 @@
   padding: .5em 1.5em;
   font-size: 14px;
   font-weight: 400;
-  color: #2046f5;
+  color: var(--secondary-text-color);
   background: #fff;
   transition: background .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
