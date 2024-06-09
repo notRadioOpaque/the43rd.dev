@@ -9,17 +9,21 @@ button {
   justify-content: center;
   gap: 1em;
   padding: .7em 1em;
+  outline-offset: 1px;
+  outline: 2px solid transparent;
+  transition-delay: 0ms;
+  transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btn_image {
   display: block;
   width: 20px;
   height: 20px;
-  transition: transform .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-button:hover .btn_image {
-  transform: translate(3px, -3px);
+button:hover {
+  outline-offset: 1px;
+  outline: 2px solid var(--secondary-text-color);
 }
 
 .background_type {

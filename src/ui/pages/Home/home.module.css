@@ -58,6 +58,7 @@
 }
 
 .title {
+  font-family: "Noto Sans", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 180%;

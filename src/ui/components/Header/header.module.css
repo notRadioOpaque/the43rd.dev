@@ -5,7 +5,13 @@
   margin-bottom: 3em;
 }
 
-.contact_me_btn {
+.header_btn_group {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.header_btn {
   background-color: var(--foreground-color);
   color: var(--primary-text-color);
   border: 2px solid var(--accent-color);
