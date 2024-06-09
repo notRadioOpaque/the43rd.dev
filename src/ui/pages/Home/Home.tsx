@@ -75,21 +75,21 @@ function Home() {
         <div className={styles.left_group}>
           <BentoWrapper width="100%" height="100%" title="Socials">
             <div className={styles.socials_wrapper}>
-              <a href="">
+              <a href="https://x.com/the43rdSensei" target="_blank">
                 <div className={styles.social}>
                   <ImageWrapper imgFile={twitterIcon} width="30px" height="30px" />
                   <p>Twitter</p>
                 </div>
               </a>
 
-              <a href="">
+              <a href="https://discordapp.com/users/828380538330415124" target="_blank">
                 <div className={styles.social}>
                   <ImageWrapper imgFile={discordIcon} width="30px" height="30px" />
                   <p>Discord</p>
                 </div>
               </a>
 
-              <a href="">
+              <a href="" target="_blank">
                 <div className={styles.social}>
                   <ImageWrapper imgFile={linkedIn} width="30px" height="30px" />
                   <p>LinkedIn</p>
