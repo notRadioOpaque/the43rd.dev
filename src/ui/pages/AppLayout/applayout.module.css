@@ -1,14 +1,17 @@
 .app_wrapper {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  /* height: 100%; */
   padding: 2.5em 2em;
   background-color: var(--background-color);
   color: var(--primary-text-color);
   transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-delay: .3s;
+  position: relative;
 }
 
 .main {
   width: 100%;
   margin: 0 auto;
+  height: 100%;
 }

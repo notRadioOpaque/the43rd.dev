@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { fetchGithubProfile } from "../../../services/Github/action";
 import arrowIcon from "../../../assets/icons/right-up-arrow-colored.svg";
 import githubIcon from "../../../assets/icons/Github-Dark.svg";
-import mapImage from "../../../assets/images/map_image2.jpg";
+import mapImage from "../../../assets/images/Google-Maps-Platform.png";
 import mapMarker from "../../../assets/icons/map-marker.svg";
 import twitterIcon from "../../../assets/icons/Twitter.svg";
 import discordIcon from "../../../assets/icons/Discord.svg";
