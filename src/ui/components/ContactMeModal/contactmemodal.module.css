@@ -34,7 +34,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(18, 18, 18, 1);
+  background: var(--foreground-color);
 }
 
 .btn_group {
@@ -89,15 +89,12 @@
 .list {
   display: flex;
   gap: 1.5em;
-  margin-top: 1em;
-
- 
 }
 
 .list a {
   font-size: 14px !important;
   font-weight: 400;
-  color: #fff;
+  color: var(--primary-text-color);
   transition: color .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
