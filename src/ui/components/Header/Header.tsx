@@ -2,9 +2,7 @@ import PrimaryTextButton from "../PrimaryTextButton/PrimaryTextButton";
 import styles from "./header.module.css";
 import arrowIcon from "../../../assets/icons/right-up-arrow-colored.svg";
 import { useState } from "react";
-import ModalContainer from "../ModalContainer/ModalContainer";
-import ImageWrapper from "../ImageWrapper/ImageWrapper";
-import contactIcon from "../../../assets/icons/contact.svg";
+import ContactMeModal from "../ContactMeModal/ContactMeModal";
 
 function Header() {
   const [showModal, setShowModal] = useState(false);
@@ -23,48 +21,7 @@ function Header() {
         />
       </div>
 
-      {showModal && (
-        <ModalContainer close={() => setShowModal(false)}>
-          <div className={styles.content_wrapper}>
-            <p>Hey there! 👋</p>
-            <h3>Let's work together</h3>
-
-            <div className={styles.divider}>
-              <div className={styles.bar}></div>
-              <div className={styles.divider_icon}>
-                <ImageWrapper imgFile={contactIcon} width="" height="" />
-              </div>
-            </div>
-
-            <div className={styles.btn_group}>
-              <div className={styles.email}>Ismailmuyideen.c05@gmail.com</div>
-
-              <a className={styles.get_in_touch_btn} href="mailto:ismailmuyideen.c05@gmail.com">
-                Get in touch
-              </a>
-            </div>
-
-            <div className={styles.socials}>
-              <p className={styles.heading}>Socials</p>
-
-              <div className={styles.list}>
-                <p>
-                  <a href="">Twitter</a>
-                </p>
-                <p>
-                  <a href="">Github</a>
-                </p>
-                <p>
-                  <a href="">Discord</a>
-                </p>
-                <p>
-                  <a href="">LinkedIn</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </ModalContainer>
-      )}
+      {showModal && <ContactMeModal close={() => setShowModal(false)} />}
     </>
   );
 }

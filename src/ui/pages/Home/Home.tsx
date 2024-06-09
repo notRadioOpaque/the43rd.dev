@@ -157,7 +157,6 @@ function Home() {
                   </div>
 
                   <div className={styles.about_me_text}>
-                    {/* <h2>Passionate to pursue the technology.</h2> */}
                     <p>I enjoy learning new things and try to overcome new challenges while analyzing how I improved through them.</p>
                   </div>
                 </>
