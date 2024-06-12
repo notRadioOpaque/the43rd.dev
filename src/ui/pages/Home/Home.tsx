@@ -69,7 +69,7 @@ function Home() {
   }, [initialFetchDone, randomImage]);
 
   return (
-    <>
+    <div className={styles.home_container}>
       <Header />
       <div className={styles.home_wrapper}>
         <div className={styles.left_group}>
@@ -191,7 +191,7 @@ function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

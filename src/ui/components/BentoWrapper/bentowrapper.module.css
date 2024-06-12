@@ -1,10 +1,10 @@
 .bento_outer {
-  transition: transform .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
 }
 
 .bento_outer:hover {
-  transform: translateY(3px);
+  transform: translateY(2px);
 }
 
 .wrapper {
