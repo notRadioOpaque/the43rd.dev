@@ -19,7 +19,7 @@ function AboutMe() {
           </div>
 
           <ul className={styles.redirect_links}>
-            <li className={styles.link} onClick={() => navigate("/experience")}>
+            <li className={styles.link} onClick={() => navigate("/experiences")}>
               <a href="">Experience</a>
               <ImageWrapper imgFile={icon} width="20px" height="20px" />
             </li>

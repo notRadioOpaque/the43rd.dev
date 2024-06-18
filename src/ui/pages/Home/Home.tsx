@@ -181,7 +181,7 @@ function Home() {
           </div>
 
           <div className={styles.rg_right}>
-            <BentoWrapper width="100%" height="250px">
+            <BentoWrapper width="100%" height="250px" action={() => navigate("experiences")}>
               <div>experience</div>
             </BentoWrapper>
 

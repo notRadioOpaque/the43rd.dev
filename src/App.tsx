@@ -6,6 +6,7 @@ import Home from "./ui/pages/Home/Home";
 import AboutMe from "./ui/pages/AboutMe/AboutMe";
 import Projects from "./ui/pages/Projects/Projects";
 import Map from "./ui/components/Map/Map";
+import Experiences from "./ui/pages/Experiences/Experiences";
 
 function App() {
   const router = createBrowserRouter([
@@ -32,6 +33,10 @@ function App() {
         {
           path: "location",
           element: <Map />,
+        },
+        {
+          path: "experiences",
+          element: <Experiences />,
         },
       ],
     },
