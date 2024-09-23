@@ -1,10 +1,12 @@
 .bento_outer {
-  transition: transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: background-color 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    border-color 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
 }
 
-.bento_outer:hover {
-  transform: translateY(2px);
+.bento_outer:hover .wrapper {
+  background-color: lighten(var(--background-color), 5%);
+  border-color: #2046f5;
 }
 
 .wrapper {
@@ -14,13 +16,12 @@
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-
   padding: 1em;
   border-radius: 24px;
   background: var(--foreground-color);
   color: var(--primary-text-color);
-  transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition-delay: .3s;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.1s;
   border: 2px solid var(--accent-color);
 }
 

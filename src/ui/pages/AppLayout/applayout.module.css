@@ -3,26 +3,29 @@
   min-height: 100vh;
   background-color: var(--background-color);
   color: var(--primary-text-color);
-  transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition-delay: .3s;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.3s;
   position: relative;
 }
 
 .main {
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }
 
 .fadeOut {
   animation: fadeOut 2s ease forwards;
-  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .fadeIn {
   animation: fadeIn 2s ease forwards;
-  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @keyframes fadeOut {
@@ -43,3 +46,16 @@
   }
 }
 
+/* Tablet: Screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .main {
+    padding: 2em 2em;
+  }
+}
+
+/* Mobile: Screens smaller than 768px */
+@media (max-width: 768px) {
+  .main {
+    padding: 2em 1.5em;
+  }
+}

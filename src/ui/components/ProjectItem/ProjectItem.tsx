@@ -9,7 +9,7 @@ export default function ProjectItem() {
     <div className={styles.project_wrapper}>
       <div className={styles.project_item}>
         <div className={styles.project_graphic}>
-          <ImageWrapper imgFile={image} width="100%" height="100%" />
+          <ImageWrapper imgFile={image} />
         </div>
 
         <div className={styles.project_details}>
@@ -19,9 +19,13 @@ export default function ProjectItem() {
 
           <div className={styles.project_about}>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, molestiae voluptatum incidunt magnam repellat illo voluptatem nostrum
-              odio obcaecati a, dolore fugiat. Officia non ipsum dolores, dignissimos soluta laboriosam molestiae tempore quaerat dolorem consectetur
-              natus ipsam eum, similique debitis architecto officiis assumenda qui asperiores nulla aperiam id molestias tenetur! Esse!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+              molestiae voluptatum incidunt magnam repellat illo voluptatem
+              nostrum odio obcaecati a, dolore fugiat. Officia non ipsum
+              dolores, dignissimos soluta laboriosam molestiae tempore quaerat
+              dolorem consectetur natus ipsam eum, similique debitis architecto
+              officiis assumenda qui asperiores nulla aperiam id molestias
+              tenetur! Esse!
             </p>
           </div>
 

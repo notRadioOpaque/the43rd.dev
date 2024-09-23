@@ -33,7 +33,11 @@ export default function BentoWrapper({
     height: height,
     width: width,
     backgroundImage: `url(${bgImg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
   };
+
   return (
     <div className={styles.bento_outer} onClick={action}>
       <div className={styles.wrapper} style={style}>

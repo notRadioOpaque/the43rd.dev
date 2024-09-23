@@ -26,7 +26,9 @@ function Map() {
     const fetchLocationDets = async () => {
       try {
         setIsLoading(true);
-        const res = await fetch(`${BASE_URL}?latitude${coordinates[0]}?longitude${coordinates[1]}`);
+        const res = await fetch(
+          `${BASE_URL}?latitude${coordinates[0]}?longitude${coordinates[1]}`
+        );
         const data = await res.json();
         setLocationDets(data);
       } catch (error) {
@@ -47,21 +49,38 @@ function Map() {
         <div className={styles.location_details}>
           <div className={styles.location_details_item}>
             <h3 className={styles.title}>City</h3>
-            <p className={styles.value}>{isLoading ? "loading..." : locationDets.city}</p>
+            <p className={styles.value}>
+              {isLoading ? "loading..." : locationDets.city}
+            </p>
           </div>
 
           <div className={styles.location_details_item}>
             <h3 className={styles.title}>Country</h3>
-            <p className={styles.value}>{isLoading ? "loading..." : locationDets.countryName + " " + "(" + locationDets.countryCode + ")"}</p>
+            <p className={styles.value}>
+              {isLoading
+                ? "loading..."
+                : locationDets.countryName +
+                  " " +
+                  "(" +
+                  locationDets.countryCode +
+                  ")"}
+            </p>
           </div>
 
           <div className={styles.location_details_item}>
             <h3 className={styles.title}>Continent</h3>
-            <p className={styles.value}>{isLoading ? "loading..." : locationDets.continent}</p>
+            <p className={styles.value}>
+              {isLoading ? "loading..." : locationDets.continent}
+            </p>
           </div>
         </div>
 
-        <MapContainer center={coordinates} zoom={6} scrollWheelZoom={true} className={styles.map}>
+        <MapContainer
+          center={coordinates}
+          zoom={6}
+          scrollWheelZoom={true}
+          className={styles.map}
+        >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"

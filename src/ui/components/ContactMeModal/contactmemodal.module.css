@@ -5,14 +5,14 @@
   text-align: center;
 }
 
-.content_wrapper p{
+.content_wrapper p {
   color: #666666;
   font-weight: 400;
   font-size: 16px;
   margin-block: 1em;
 }
 
-.content_wrapper h3{
+.content_wrapper h3 {
   font-weight: 500;
   font-size: 30px;
 }
@@ -68,7 +68,7 @@
   font-weight: 400;
   color: var(--secondary-text-color);
   background: #fff;
-  transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .get_in_touch_btn:hover {
@@ -95,9 +95,21 @@
   font-size: 14px !important;
   font-weight: 400;
   color: var(--primary-text-color);
-  transition: color .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: color 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .list a:hover {
   color: var(--secondary-text-color);
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .bar {
+    border: 1px solid rgba(102, 102, 102, 0.2);
+    width: 250px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
 }

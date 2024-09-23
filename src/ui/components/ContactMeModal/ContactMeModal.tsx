@@ -18,7 +18,10 @@ export default function ContactMeModal({ close }: { close: () => void }) {
         </div>
 
         <div className={styles.btn_group}>
-          <a className={styles.get_in_touch_btn} href="mailto:ismailmuyideen.c05@gmail.com">
+          <a
+            className={styles.get_in_touch_btn}
+            href="mailto:ismailmuyideen.c05@gmail.com"
+          >
             Get in touch
           </a>
         </div>
@@ -28,23 +31,26 @@ export default function ContactMeModal({ close }: { close: () => void }) {
 
           <div className={styles.list}>
             <p>
-              <a href="https://x.com/the43rdSensei" target="_blank">
+              <a href="https://x.com/notRadioOpaque" target="_blank">
                 Twitter
               </a>
             </p>
             <p>
-              <a href="https://github.com/the43rdsensei-0" target="_blank">
+              <a href="https://github.com/notRadioOpaque" target="_blank">
                 Github
               </a>
             </p>
             <p>
-              <a href="https://discordapp.com/users/828380538330415124" target="_blank">
+              <a
+                href="https://discordapp.com/users/828380538330415124"
+                target="_blank"
+              >
                 Discord
               </a>
             </p>
-            <p>
+            {/* <p>
               <a href="">LinkedIn</a>
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

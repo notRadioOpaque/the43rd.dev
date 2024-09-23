@@ -2,6 +2,7 @@
   overflow: hidden;
   height: max-content;
   position: relative;
+  padding: 2em;
 }
 
 .projects_inner {
@@ -11,5 +12,25 @@
   display: flex;
   flex-direction: column;
   gap: 2em;
-  padding: 3em 3em;
+  padding: 3em 0;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .projects_inner {
+    padding: 2em 1.5em;
+    gap: 1.5em;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .projects_wrapper {
+    padding: 0;
+  }
+
+  .projects_inner {
+    padding: 1.5em 0;
+    gap: 1em;
+  }
 }

@@ -14,7 +14,61 @@
   background-color: var(--foreground-color);
   color: var(--primary-text-color);
   border: 2px solid var(--accent-color);
-  transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition-delay: .3s;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.3s;
 }
 
+.menu_btn {
+  display: none;
+  cursor: pointer;
+}
+
+.menu_btn img {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .header_btn_group {
+    display: none;
+  }
+
+  .menu_btn {
+    display: flex;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .mobile_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    background: transparent;
+  }
+
+  .nav_link {
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--primary-text-color);
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav_link:hover {
+    opacity: 70%;
+  }
+}

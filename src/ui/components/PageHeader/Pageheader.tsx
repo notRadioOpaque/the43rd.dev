@@ -9,7 +9,7 @@ function PageHeader({ title }: { title: string }) {
   return (
     <div className={styles.page_header_wrapper}>
       <div className={styles.back_btn} onClick={() => navigate(-1)}>
-        <ImageWrapper imgFile={arrowBack} width="70px" height="70px" />
+        <ImageWrapper imgFile={arrowBack} />
       </div>
 
       <h2>{title}</h2>
