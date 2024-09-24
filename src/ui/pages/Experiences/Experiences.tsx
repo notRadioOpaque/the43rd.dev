@@ -26,10 +26,9 @@ export default function Experiences() {
           </p>
 
           <p className={styles.experience__details}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis unde,
-            quae sed expedita iste iure aspernatur ipsum culpa quod consequuntur
-            exercitationem laudantium reiciendis laborum. Doloribus alias
-            obcaecati atque cum similique?
+            Built responsive, high-performance interfaces with React and
+            TypeScript. Integrated APIs and optimized state management to
+            enhance user experience and scalability.
           </p>
         </div>
       </div>
@@ -48,17 +47,15 @@ export default function Experiences() {
           </div>
 
           <p className={styles.experience__details}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis unde,
-            quae sed expedita iste iure aspernatur ipsum culpa quod consequuntur
-            exercitationem laudantium reiciendis laborum. Doloribus alias
-            obcaecati atque cum similique?
+            Established the frontend architecture using React, TypeScript, and
+            Tailwind CSS, while integrating Supabase and optimizing state
+            management with React Query.
           </p>
 
           <p className={styles.experience__details}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis unde,
-            quae sed expedita iste iure aspernatur ipsum culpa quod consequuntur
-            exercitationem laudantium reiciendis laborum. Doloribus alias
-            obcaecati atque cum similique?
+            Developed reusable components and streamlined data handling,
+            ensuring efficient and scalable application performance. Enhanced UI
+            consistency and responsiveness across all devices.
           </p>
         </div>
       </div>
