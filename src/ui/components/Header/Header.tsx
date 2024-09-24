@@ -66,7 +66,7 @@ function Header() {
               className={styles.nav_link}
               onClick={closeMenu}
             >
-              Experience
+              Experiences
             </Link>
             <Link
               to="/projects"

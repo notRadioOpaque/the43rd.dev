@@ -34,6 +34,12 @@
   flex-shrink: 0;
 }
 
+.date span {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
 .content {
   padding: 2em;
 }
@@ -48,6 +54,12 @@
   width: 95%;
   line-height: 1.5;
   padding-top: 0.5em;
+}
+
+.bar {
+  border: var(--secondary-text-color) 1px solid;
+  width: 50px;
+  height: 1px;
 }
 
 /* Tablet view */
