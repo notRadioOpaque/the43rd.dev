@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 @import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
 
 :root {
-  font-family: 'Rubik', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Rubik", system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   color-scheme: light dark;
 
@@ -21,7 +21,7 @@
   --foreground-color: #fff;
   --accent-color: #cccccc;
   --primary-text-color: #121212;
-  --secondary-text-color: #2046f5;
+  --secondary-text-color: #2b65e3;
 }
 
 [data-theme="dark"] {
@@ -29,10 +29,12 @@
   --accent-color: #30363d;
   --foreground-color: #0d1117;
   --primary-text-color: #fff;
-  --secondary-text-color: #2046f5;
+  --secondary-text-color: #2b65e3;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;

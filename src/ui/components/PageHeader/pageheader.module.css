@@ -11,6 +11,10 @@
   line-height: 1.2;
 }
 
+.back_btn {
+  cursor: pointer;
+}
+
 /* Tablet view */
 @media (max-width: 768px) {
   .page_header_wrapper {
@@ -30,6 +34,7 @@
     gap: 1em;
     display: flex;
     align-items: center;
+    padding-inline: 0;
   }
 
   .page_header_wrapper h2 {

@@ -108,6 +108,20 @@
     border: 1px solid rgba(102, 102, 102, 0.2);
     width: 250px;
   }
+
+  .content_wrapper h3 {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .btn_group {
+    width: 100%;
+  }
+
+  .get_in_touch_btn {
+    width: max-content;
+    margin-inline: auto;
+  }
 }
 
 /* Mobile view */

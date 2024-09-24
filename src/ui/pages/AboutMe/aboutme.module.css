@@ -27,7 +27,7 @@
   font-size: 24px;
   font-weight: 500;
   margin-block: 0.4em;
-  color: blue;
+  color: var(--secondary-text-color);
 }
 
 .content_left p {
@@ -65,7 +65,7 @@
 }
 
 .redirect_links li a {
-  color: blue;
+  color: var(--secondary-text-color);
 }
 
 .content_right div {

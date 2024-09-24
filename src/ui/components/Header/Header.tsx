@@ -17,11 +17,9 @@ function Header() {
   return (
     <>
       <div className={styles.header_wrapper}>
-        <h3>
-          <a style={{ color: "var(--primary-text-color)" }} href="">
-            NRO
-          </a>
-        </h3>
+        <a href="">
+          <h3 className={styles.logo_text}>NRO</h3>
+        </a>
 
         <div className={styles.header_btn_group}>
           <a href={resume} download={"My Resume"} target="_blank">

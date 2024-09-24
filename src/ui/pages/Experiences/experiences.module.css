@@ -24,7 +24,7 @@
   display: block;
   width: max-content;
   font-size: 14px;
-  color: blue;
+  color: var(--secondary-text-color);
 }
 
 .date {

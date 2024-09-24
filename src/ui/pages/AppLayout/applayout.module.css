@@ -3,8 +3,11 @@
   min-height: 100vh;
   background-color: var(--background-color);
   color: var(--primary-text-color);
-  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition-delay: 0.3s;
+  /* transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.3s; */
+
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.1s;
   position: relative;
 }
 
@@ -20,12 +23,18 @@
 
 .fadeOut {
   animation: fadeOut 2s ease forwards;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.1s;
 }
 
 .fadeIn {
   animation: fadeIn 2s ease forwards;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.1s;
 }
 
 @keyframes fadeOut {

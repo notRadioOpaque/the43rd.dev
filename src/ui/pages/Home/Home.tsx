@@ -139,10 +139,10 @@ function Home() {
                       />
                     </div>
                     <div>
-                      <ImageWrapper
-                        imgFile={githubProfile.avatar_url}
-                        width="35px"
-                        height="35px"
+                      <img
+                        src={githubProfile.avatar_url}
+                        alt=""
+                        className={styles.github_avatar}
                       />
                       <p>{githubProfile.name}</p>
                     </div>
