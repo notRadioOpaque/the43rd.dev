@@ -3,7 +3,7 @@ import styles from "./header.module.css";
 import menuIcon from "../../../assets/icons/menu_icon.svg";
 import arrowIcon from "../../../assets/icons/right-up-arrow-colored.svg";
 import downloadIcon from "../../../assets/icons/download-icon2.svg";
-import resume from "../../../assets/resume/Mark Myers - A Smarter Way to Learn JavaScript_ The new approach that uses technology to cut your effort in half-CreateSpace Independent Publishing Platform (2014).pdf";
+import resume from "../../../assets/resume/notRadioOpaque_resume.pdf";
 import { useState } from "react";
 import ContactMeModal from "../ContactMeModal/ContactMeModal";
 import { Link } from "react-router-dom";
