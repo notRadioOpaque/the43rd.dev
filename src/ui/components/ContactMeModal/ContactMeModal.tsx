@@ -36,11 +36,6 @@ export default function ContactMeModal({ close }: { close: () => void }) {
               </a>
             </p>
             <p>
-              <a href="https://github.com/notRadioOpaque" target="_blank">
-                Github
-              </a>
-            </p>
-            <p>
               <a
                 href="https://discordapp.com/users/828380538330415124"
                 target="_blank"
@@ -48,9 +43,6 @@ export default function ContactMeModal({ close }: { close: () => void }) {
                 Discord
               </a>
             </p>
-            {/* <p>
-              <a href="">LinkedIn</a>
-            </p> */}
           </div>
         </div>
       </div>
