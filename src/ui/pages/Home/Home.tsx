@@ -4,7 +4,6 @@ import BentoWrapper from "../../components/BentoWrapper/BentoWrapper";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchGithubProfile } from "../../../services/Github/action";
-import arrowIcon from "../../../assets/icons/right-up-arrow-colored.svg";
 import githubIcon from "../../../assets/icons/Github-Dark.svg";
 import mapImage from "../../../assets/images/Google-Maps-Platform.png";
 import mapMarker from "../../../assets/icons/map-marker.svg";
@@ -63,7 +62,12 @@ function Home() {
     <div className={styles.home_container}>
       <div className={styles.home_wrapper}>
         <div className={styles.left_group}>
-          <BentoWrapper width="100%" height="100%" title="Socials">
+          <BentoWrapper
+            width="100%"
+            height="100%"
+            title="Socials"
+            isClickable={false}
+          >
             <div className={styles.socials_wrapper}>
               <a href="https://x.com/notRadioOpaque" target="_blank">
                 <div className={styles.social}>
@@ -89,30 +93,24 @@ function Home() {
                   <p>Discord</p>
                 </div>
               </a>
-
-              {/* <a href="" target="_blank">
-                <div className={styles.social}>
-                  <ImageWrapper imgFile={linkedIn} width="30px" height="30px" />
-                  <p>LinkedIn</p>
-                </div>
-              </a> */}
             </div>
           </BentoWrapper>
 
-          <BentoWrapper width="100%" height="100%" title="Skills">
+          <BentoWrapper
+            width="100%"
+            height="100%"
+            title="Skills"
+            isClickable={false}
+          >
             <SkillGrid />
           </BentoWrapper>
         </div>
 
         <div className={styles.middle_group}>
           <div className={styles.intro_text}>
-            {/* <div className={styles.subtitle}>
-              <ImageWrapper imgFile={IconSpark} width="30px" height="30px" />
-              <p className={styles.subtitle_text}>Hi, I'm </p>
-            </div> */}
             <div className={styles.title}>
               <h2>
-                Ismael Muyideen <br />
+                Ismail Muyideen <br />
                 Frontend Developer.
               </h2>
             </div>
@@ -120,13 +118,14 @@ function Home() {
 
           <div className={styles.middle_group_bottom}>
             <div className={styles.mg_left}>
-              <BentoWrapper width="100%" height="100%">
+              <BentoWrapper width="100%" height="100%" isClickable={false}>
                 <RandomImages randomImage={randomImage} />
               </BentoWrapper>
 
               <BentoWrapper
                 width="100%"
                 height="max-content"
+                isClickable={true}
                 action={() => window.open(githubProfile.html_url, "_blank")}
               >
                 <>
@@ -150,14 +149,6 @@ function Home() {
                       Public Repos: {githubProfile.public_repos}
                     </p>
                   </div>
-
-                  <div className={styles.arrow}>
-                    <ImageWrapper
-                      imgFile={arrowIcon}
-                      width="20px"
-                      height="20px"
-                    />
-                  </div>
                 </>
               </BentoWrapper>
             </div>
@@ -166,6 +157,7 @@ function Home() {
               <BentoWrapper
                 width="100%"
                 height="100%"
+                isClickable={true}
                 action={() => navigate("about")}
               >
                 <>
@@ -195,6 +187,7 @@ function Home() {
             <BentoWrapper
               width="100%"
               height="180px"
+              isClickable={true}
               action={() => navigate("location")}
               bgImg={mapImage}
               title="location"
@@ -207,6 +200,7 @@ function Home() {
             <BentoWrapper
               width="100%"
               height="100%"
+              isClickable={true}
               title="Projects"
               bgImg={workImage}
               action={() => navigate("projects")}
@@ -219,6 +213,7 @@ function Home() {
             <BentoWrapper
               width="100%"
               height="250px"
+              isClickable={true}
               title="Experiences"
               bgImg={experiencesImage}
               action={() => navigate("experiences")}
@@ -226,7 +221,7 @@ function Home() {
               <div className={styles.bag_icon}></div>
             </BentoWrapper>
 
-            <BentoWrapper width="100%" height="180px">
+            <BentoWrapper width="100%" height="180px" isClickable={false}>
               <Toggle
                 isChecked={isDark}
                 handleChange={() => setIsDark(!isDark)}

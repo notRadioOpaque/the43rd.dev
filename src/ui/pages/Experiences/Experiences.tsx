@@ -16,7 +16,7 @@ export default function Experiences() {
         <div className={styles.content}>
           <div className={styles.experience__heading}>
             The Shawn Exchange
-            <span className={styles.company}>Junior Frontend Developer</span>
+            <span className={styles.company}>Frontend Engineer</span>
           </div>
 
           <p className={styles.experience__details}>
@@ -36,20 +36,27 @@ export default function Experiences() {
       <div className={styles.experience}>
         <div className={styles.date}>
           <span>
-            August 2024<div className={styles.bar}></div>Present
+            August 2024<div className={styles.bar}></div>Present (Contract)
           </span>
         </div>
 
         <div className={styles.content}>
           <div className={styles.experience__heading}>
             Auritrack
-            <span className={styles.company}>Lead Frontend Developer</span>
+            <span className={styles.company}>Lead Frontend Engineer</span>
           </div>
 
           <p className={styles.experience__details}>
             Established the frontend architecture using React, TypeScript, and
             Tailwind CSS, while integrating Supabase and optimizing state
             management with React Query.
+          </p>
+
+          <p className={styles.experience__details}>
+            Provided technical leadership by conducting code reviews, mentoring
+            junior developers, establishing coding standards, and collaborating
+            cross-functionally to deliver high-quality, scalable frontend
+            solutions.
           </p>
 
           <p className={styles.experience__details}>
