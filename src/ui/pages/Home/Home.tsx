@@ -111,7 +111,7 @@ function Home() {
             <div className={styles.title}>
               <h2>
                 Ismail Muyideen <br />
-                Frontend Developer.
+                Frontend Engineer.
               </h2>
             </div>
           </div>
