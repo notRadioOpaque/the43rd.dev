@@ -165,7 +165,7 @@ function Home() {
                     <img src={myMemoji} alt="" />
                     <div>
                       <p className={styles.name}>Ismail Muyideen</p>
-                      <p className={styles.role}>Frontend developer</p>
+                      <p className={styles.role}>Frontend Engineer</p>
                     </div>
                   </div>
 

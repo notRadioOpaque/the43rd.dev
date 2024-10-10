@@ -9,12 +9,12 @@ function AboutMe() {
 
   return (
     <div className={styles.content_container}>
-      <PageHeader title="About me" />
+      <PageHeader title="About Me" />
       <div className={styles.content_wrapper}>
         <div className={styles.content_left}>
           <div>
-            <h2>Ismael Muyideen</h2>
-            <h3>Frontend Developer</h3>
+            <h2>Ismail Muyideen</h2>
+            <h3>Frontend Engineer</h3>
             <p>
               I craft pixel-perfect, immersive, and accessible digital
               experiences that captivate and engage users, blending creativity
