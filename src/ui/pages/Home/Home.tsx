@@ -9,6 +9,7 @@ import mapImage from "../../../assets/images/Google-Maps-Platform.png";
 import mapMarker from "../../../assets/icons/map-marker.svg";
 import twitterIcon from "../../../assets/icons/Twitter.svg";
 import discordIcon from "../../../assets/icons/Discord.svg";
+import linkedinIcon from "../../../assets/icons/LinkedIn.svg";
 import SkillGrid from "../../components/SkillGrid/SkillGrid";
 import RandomImages from "../../components/RandomImages/RandomImages";
 import { fetchUnsplashImages } from "../../../services/unsplash/action";
@@ -91,6 +92,20 @@ function Home() {
                     height="30px"
                   />
                   <p>Discord</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/ismail-muyideen-619518202/"
+                target="_blank"
+              >
+                <div className={styles.social}>
+                  <ImageWrapper
+                    imgFile={linkedinIcon}
+                    width="30px"
+                    height="30px"
+                  />
+                  <p>LinkedIn</p>
                 </div>
               </a>
             </div>
