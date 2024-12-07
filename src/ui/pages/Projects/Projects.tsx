@@ -7,6 +7,15 @@ import auritrack_image from "../../../assets/images/auritrack-image.png";
 
 const projects = [
   {
+    projectName: "AuriTrack",
+    projectDetails:
+      "AuriTrack is a comprehensive spending and saving tracking web application that enables users to log their incomes and expenditures. It provides powerful data analytics to help users visualize their financial habits, including insights on who they are giving to most and who is receiving the most from them, aiding in better financial decision-making.",
+    imageURL: auritrack_image,
+    githubURL: "",
+    URL: "https://auritrack.com",
+    langList: ["Tailwind", "React", "React Query", "Typescript"],
+  },
+  {
     projectName: "Shawn Exchange",
     projectDetails:
       "Shawn Exchange is a platform designed for seamless conversion of gift cards and cryptocurrencies to Naira. The platform provides users with fast, secure, and efficient exchange services, allowing them to trade their digital assets for local currency with competitive rates and an easy-to-use interface.",
@@ -14,15 +23,6 @@ const projects = [
     githubURL: "",
     URL: "https://admin.shawnexchange.com/",
     langList: ["CSS", "React", "Typescript"],
-  },
-  {
-    projectName: "AuriTrack",
-    projectDetails:
-      "AuriTrack is a comprehensive spending and saving tracking web application that enables users to log their incomes and expenditures. It provides powerful data analytics to help users visualize their financial habits, including insights on who they are giving to most and who is receiving the most from them, aiding in better financial decision-making.",
-    imageURL: auritrack_image,
-    githubURL: "",
-    URL: "https://auritrack.netlify.app/login",
-    langList: ["Tailwind", "React", "React Query", "Typescript"],
   },
   {
     projectName: "notRadioOpaque.dev",
